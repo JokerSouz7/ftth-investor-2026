@@ -4,111 +4,62 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Private Infrastructure Memorandum | Arthasys</title>
+<title>Memorandum Investasi FTTH 2026</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
 body{
-margin:0;
-font-family:'Segoe UI',sans-serif;
-background:#050508;
-color:#eaeaea;
-overflow-x:hidden;
-scroll-behavior:smooth;
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#070b14;
+    color:#eaeaea;
+    scroll-behavior:smooth;
 }
-
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:radial-gradient(circle at center,#111 0%,#050508 70%);
-}
-
-.logo{
-width:190px;
-margin-bottom:30px;
-animation:fadeIn 2s ease;
-}
-
-h1{
-color:#c6a756;
-font-size:42px;
-letter-spacing:2px;
-animation:fadeUp 1.5s ease;
-}
-
-.subtitle{
-color:#aaa;
-margin-top:20px;
-animation:fadeUp 2s ease;
-}
-
 section{
-padding:100px 12%;
-border-bottom:1px solid #111;
-opacity:0;
-transform:translateY(40px);
-transition:all 1s ease;
+    padding:80px 8%;
+    border-bottom:1px solid rgba(255,215,0,0.15);
 }
-
-section.visible{
-opacity:1;
-transform:translateY(0);
+h1,h2,h3{
+    color:#d4af37;
+    letter-spacing:1px;
 }
-
+.hero{
+    text-align:center;
+    padding:120px 10%;
+    background:linear-gradient(135deg,#0d1323,#05070c);
+}
+.hero h1{
+    font-size:42px;
+}
 .card{
-background:rgba(255,255,255,0.04);
-backdrop-filter:blur(8px);
-padding:40px;
-border-radius:15px;
-border:1px solid rgba(198,167,86,0.2);
-margin-top:30px;
+    background:rgba(255,255,255,0.04);
+    padding:30px;
+    border-radius:14px;
+    margin-top:20px;
+    box-shadow:0 0 40px rgba(212,175,55,0.05);
 }
-
 .highlight{
-font-size:30px;
-color:#c6a756;
-font-weight:600;
+    color:#d4af37;
+    font-weight:600;
 }
-
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
 }
-
-.box{
-background:rgba(255,255,255,0.03);
-padding:30px;
-border-radius:12px;
-border:1px solid #111;
-text-align:center;
-}
-
-canvas{
-margin-top:50px;
-}
-
 footer{
-text-align:center;
-padding:80px;
-color:#666;
-font-size:13px;
+    text-align:center;
+    padding:40px;
+    color:#aaa;
+    font-size:14px;
 }
-
-@keyframes fadeIn{
-from{opacity:0}
-to{opacity:1}
+canvas{
+    margin-top:30px;
 }
-
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(30px)}
-to{opacity:1;transform:translateY(0)}
+ul{
+    line-height:1.8;
 }
 </style>
 </head>
@@ -116,51 +67,103 @@ to{opacity:1;transform:translateY(0)}
 <body>
 
 <div class="hero">
-<img src="logo.png.jpeg" class="logo">
-<h1>Memorandum Investasi Infrastruktur Privat</h1>
-<div class="subtitle">
-FTTH Surabaya 2026<br>
-Prepared Exclusively For H. Ananta Agung Junaedy
-</div>
+    <h1>Confidential Investment Memorandum</h1>
+    <p>FTTH Infrastructure Expansion 2026</p>
+    <p class="highlight">PT Arthasys Solusi Teknologi</p>
 </div>
 
 <section>
-<h2 style="color:#c6a756;">Ringkasan Eksekutif</h2>
+<h2>I. Executive Summary</h2>
 <div class="card">
-<p>Model Silent Capital Participation (Non-Equity).</p>
-<p>Target 12–14 SPK tahun 2026.</p>
-<p>Siklus rotasi modal 90 hari (60 kerja + 30 SP2D).</p>
-<p class="highlight">Target ROI 20% – 25% Annual</p>
+<p>Model kerja sama <b>Silent Partner</b> untuk proyek penggelaran Fiber To The Home (FTTH) Pemerintah Kota Surabaya 2026.</p>
+<p>Target pelaksanaan: <b>Minimum 12 SPK – Maksimum 14 SPK</b></p>
+<p>Lead Time: <b>60 hari pekerjaan + 30 hari proses SP2D (90 hari capital cycle)</b></p>
+<p>Profit Sharing: <span class="highlight">50 : 50</span></p>
+<p>Management Fee: <span class="highlight">12%</span></p>
 </div>
 </section>
 
 <section>
-<h2 style="color:#c6a756;">Unit Economics per SPK</h2>
+<h2>II. Unit Economics per SPK</h2>
 <div class="card">
-<p>Nilai SPK: Rp 589.831.800</p>
-<p>Cash In: Rp 520.752.400</p>
+<p>Nilai SPK (contoh historis): Rp 589.831.800</p>
+<p>Cash In (SP2D setelah PPN): Rp 520.752.400</p>
 <p>Direct Cost: Rp 348.000.000</p>
-<p class="highlight" id="profitCounter">Rp 0</p>
+<p>Management Fee 12%: ± Rp 62.490.288</p>
+<p>Net Profit: ± Rp 110.262.112</p>
+<p>Investor Share 50%: <span class="highlight">± Rp 55 Juta / SPK</span></p>
 </div>
 </section>
 
 <section>
-<h2 style="color:#c6a756;">Capital Rotation 90 Hari</h2>
-<div class="grid">
-<div class="box"><h3>60 Hari</h3>Pekerjaan</div>
-<div class="box"><h3>30 Hari</h3>SP2D</div>
-<div class="box"><h3>90 Hari</h3>Total Cycle</div>
+<h2>III. Capital Efficiency Model</h2>
+<div class="card">
+<p>Total estimasi cost 12 SPK: ± Rp 4,176 Miliar</p>
+<p>Modal efektif yang dibutuhkan:</p>
+<h3 class="highlight">50% dari total cost (± Rp 2,08 Miliar)</h3>
+<p>Melalui mekanisme SP2D, modal berputar setiap 90 hari sehingga cukup menggunakan 50% modal untuk menyelesaikan seluruh SPK dalam 1 tahun.</p>
 </div>
-</section>
 
-<section>
-<h2 style="color:#c6a756;">Capital Efficiency</h2>
 <canvas id="capitalChart"></canvas>
 </section>
 
 <section>
-<h2 style="color:#c6a756;">Rolling Cashflow</h2>
+<h2>IV. Rolling Cashflow Projection</h2>
 <canvas id="cashflowChart"></canvas>
+</section>
+
+<section>
+<h2>V. Distribution Waterfall</h2>
+<div class="card">
+<ul>
+<li>SP2D Cair</li>
+<li>Potong Pajak (PPN)</li>
+<li>Direct Cost</li>
+<li>Management Fee 12%</li>
+<li>Sisa Net Profit dibagi 50:50</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>VI. Capital Safeguard & Governance</h2>
+<div class="card">
+<ul>
+<li>Perhitungan berbasis SPK (contract-based accounting)</li>
+<li>Laporan progres & distribusi per SPK</li>
+<li>Investor tidak terlibat operasional</li>
+<li>Tidak ada pengalihan saham</li>
+<li>Exit penuh Desember 2026</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>VII. Downside Protection</h2>
+<div class="card">
+<p>Cost +5% → ROI tetap positif</p>
+<p>Cost +10% → Proyek tetap profitable dalam skenario konservatif</p>
+</div>
+</section>
+
+<section>
+<h2>VIII. Exit Strategy</h2>
+<div class="card">
+<ul>
+<li>Full capital return – Desember 2026</li>
+<li>Opsi perpanjangan 2027</li>
+<li>Opsi penarikan sebagian setelah milestone tertentu</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>IX. Disclaimer & Terms</h2>
+<div class="card">
+<p>Nilai SPK dapat berubah berdasarkan hasil survey teknis pemerintah.</p>
+<p>SPK historis hanya contoh. Perhitungan menggunakan harga satuan pekerjaan.</p>
+<p>Proyeksi bersifat estimasi dan bukan jaminan fixed return.</p>
+</div>
 </section>
 
 <footer>
@@ -169,63 +172,39 @@ Prepared Exclusively For H. Ananta Agung Junaedy
 
 <script>
 
-// Scroll reveal
-const sections=document.querySelectorAll("section");
-window.addEventListener("scroll",()=>{
-sections.forEach(sec=>{
-const top=sec.getBoundingClientRect().top;
-if(top<window.innerHeight-100){
-sec.classList.add("visible");
-}
-});
-});
-
-// Animated counter
-let count=0;
-let target=113000000;
-let speed=2000000;
-function updateCounter(){
-if(count<target){
-count+=speed;
-document.getElementById("profitCounter").innerText="Net Profit ± Rp "+count.toLocaleString();
-requestAnimationFrame(updateCounter);
-}
-}
-updateCounter();
-
-// Charts
-new Chart(document.getElementById('capitalChart'),{
+const capitalChart = new Chart(document.getElementById('capitalChart'),{
 type:'line',
 data:{
-labels:['1','2','3','4','5','6','7','8','9','10','11','12'],
+labels:[1,2,3,4,5,6,7,8,9,10,11,12],
 datasets:[
 {
-label:'Modal 100%',
-data:[348,696,1044,1392,1740,2088,2436,2784,3132,3480,3828,4176],
-borderColor:'#555',
-tension:0.4
+label:'Tanpa Efisiensi Modal',
+data:[350,700,1050,1400,1750,2100,2450,2800,3150,3500,3850,4200],
+borderColor:'#888',
+fill:false
 },
 {
-label:'Modal 50%',
-data:[174,348,522,696,870,1044,1218,1392,1566,1740,1914,2088],
-borderColor:'#c6a756',
-backgroundColor:'rgba(198,167,86,0.2)',
-fill:true,
-tension:0.4
+label:'Model 50% Capital Efficiency',
+data:[180,350,520,700,870,1050,1230,1400,1580,1750,1930,2100],
+borderColor:'#d4af37',
+backgroundColor:'rgba(212,175,55,0.15)',
+fill:true
 }
 ]
 }
 });
 
-new Chart(document.getElementById('cashflowChart'),{
+const cashflowChart = new Chart(document.getElementById('cashflowChart'),{
 type:'bar',
 data:{
-labels:['1','2','3','4','5','6','7','8','9','10','11','12'],
-datasets:[{
+labels:[1,2,3,4,5,6,7,8,9,10,11,12],
+datasets:[
+{
 label:'Cumulative Profit (Juta)',
-data:[39,78,117,156,195,234,273,312,351,390,429,468],
-backgroundColor:'#c6a756'
-}]
+data:[55,110,165,220,275,330,385,440,495,550,605,660],
+backgroundColor:'#d4af37'
+}
+]
 }
 });
 
