@@ -12,88 +12,74 @@
 <style>
 body{
     margin:0;
-    background:radial-gradient(circle at top,#0f172a 0%,#020617 70%);
+    background:linear-gradient(135deg,#0b1220 0%,#04080f 100%);
     color:#e2e8f0;
     font-family:'Inter',sans-serif;
-    scroll-behavior:smooth;
 }
 
 .container{
-    max-width:1100px;
+    max-width:1000px;
     margin:auto;
-    padding:120px 20px;
+    padding:90px 20px;
 }
 
-/* LOGO */
-.logo{
-    font-family:'Playfair Display',serif;
-    font-size:28px;
-    font-weight:600;
-    letter-spacing:1px;
-}
-.logo span{color:#c8a94a;}
-
+/* HEADER */
 .header{
-    margin-bottom:140px;
+    margin-bottom:90px;
+}
+
+.logo-img{
+    height:50px;
+    margin-bottom:25px;
 }
 
 .title h1{
     font-family:'Playfair Display',serif;
-    font-size:48px;
-    margin:10px 0 0;
+    font-size:44px;
+    margin:0;
+    line-height:1.2;
+    letter-spacing:-0.5px;
 }
 
 .title p{
-    margin-top:20px;
-    color:#c8a94a;
+    margin-top:15px;
+    font-size:14px;
     letter-spacing:3px;
-    font-size:15px;
+    color:#c8a94a;
 }
 
 /* SECTION */
 .section{
-    padding:120px 0;
+    padding:70px 0;
     border-bottom:1px solid rgba(255,255,255,0.05);
-    opacity:0;
-    transform:translateY(40px);
-    transition:all .8s ease;
-}
-
-.section.visible{
-    opacity:1;
-    transform:translateY(0);
 }
 
 .section h2{
     font-family:'Playfair Display',serif;
-    font-size:36px;
+    font-size:30px;
+    margin-bottom:30px;
     color:#c8a94a;
-    margin-bottom:40px;
-    text-shadow:0 0 20px rgba(200,169,74,.2);
 }
 
 .section p{
-    font-size:18px;
-    line-height:1.8;
-    color:#cbd5e1;
+    font-size:17px;
+    line-height:1.7;
+    margin-bottom:14px;
 }
 
+/* HIGHLIGHT */
 .highlight{
     font-family:'Playfair Display',serif;
-    font-size:60px;
+    font-size:48px;
+    margin:25px 0;
     color:#c8a94a;
-    margin:30px 0;
 }
 
-canvas{
-    margin-top:50px;
-    filter:drop-shadow(0 0 25px rgba(200,169,74,.15));
-}
-
+/* INSIGHT BOX */
 .insight{
-    margin-top:40px;
-    padding:25px;
-    background:rgba(255,255,255,0.03);
+    margin-top:35px;
+    padding:22px 26px;
+    background:rgba(255,255,255,0.04);
     border-left:3px solid #c8a94a;
     border-radius:6px;
 }
@@ -103,14 +89,18 @@ canvas{
 }
 
 .insight li{
-    margin-bottom:8px;
-    font-size:16px;
+    margin-bottom:6px;
+    font-size:15px;
+}
+
+/* CHART */
+canvas{
+    margin-top:40px;
 }
 
 @media(max-width:768px){
     .title h1{font-size:32px;}
-    .section h2{font-size:26px;}
-    .highlight{font-size:40px;}
+    .highlight{font-size:36px;}
 }
 </style>
 </head>
@@ -119,7 +109,7 @@ canvas{
 <div class="container">
 
 <div class="header">
-<div class="logo"><span>A</span>rthasys</div>
+<img src="/logo.jpeg" class="logo-img" alt="Arthasys Logo">
 <div class="title">
 <h1>Confidential Investment Memorandum</h1>
 <p>FTTH INFRASTRUCTURE EXPANSION 2026</p>
@@ -153,7 +143,6 @@ canvas{
 <div class="section">
 <h2>IV. Margin Visualization per SPK</h2>
 <canvas id="chart1"></canvas>
-
 <div class="insight">
 <strong>Key Insight:</strong>
 <ul>
@@ -168,7 +157,6 @@ canvas{
 <div class="section">
 <h2>V. Cumulative Profit Projection (12 SPK)</h2>
 <canvas id="chart2"></canvas>
-
 <div class="insight">
 <strong>Key Insight:</strong>
 <ul>
@@ -183,7 +171,6 @@ canvas{
 <div class="section">
 <h2>VI. Capital Rotation Model (90 Day Cycle)</h2>
 <canvas id="chart3"></canvas>
-
 <div class="insight">
 <strong>Key Insight:</strong>
 <ul>
@@ -224,48 +211,51 @@ canvas{
 </div>
 
 <script>
-// Scroll Animation
-const sections=document.querySelectorAll('.section');
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){entry.target.classList.add('visible');}
-});
-},{threshold:.15});
-sections.forEach(sec=>observer.observe(sec));
-
-// Charts
 Chart.defaults.color="#cbd5e1";
 Chart.defaults.font.family="Inter";
 
 new Chart(document.getElementById('chart1'),{
 type:'bar',
-data:{labels:['Cash In','Direct Cost','Net Profit'],
-datasets:[{data:[520,348,113],
-backgroundColor:['#c8a94a','#475569','#22c55e'],
-borderRadius:8}]},
-options:{animation:{duration:1500,easing:'easeOutQuart'},
-plugins:{legend:{display:false}},
-scales:{y:{grid:{color:'rgba(255,255,255,.05)'}}}}
+data:{
+labels:['Cash In','Direct Cost','Net Profit'],
+datasets:[{
+label:'Margin Structure (Juta)',
+data:[520,348,113],
+backgroundColor:['#c8a94a','#4b5563','#22c55e'],
+borderRadius:6
+}]
+},
+options:{plugins:{legend:{display:false}}}
 });
 
 new Chart(document.getElementById('chart2'),{
 type:'line',
-data:{labels:['1','2','3','4','5','6','7','8','9','10','11','12'],
-datasets:[{data:[58,116,174,232,290,348,406,464,522,580,638,696],
+data:{
+labels:[1,2,3,4,5,6,7,8,9,10,11,12],
+datasets:[{
+label:'Cumulative Profit (Juta)',
+data:[58,116,174,232,290,348,406,464,522,580,638,696],
 borderColor:'#c8a94a',
-backgroundColor:'rgba(200,169,74,.1)',
-fill:true,tension:.35}]},
-options:{animation:{duration:1800,easing:'easeOutQuart'}}
+backgroundColor:'rgba(200,169,74,0.1)',
+fill:true,
+tension:.3
+}]
+}
 });
 
 new Chart(document.getElementById('chart3'),{
 type:'line',
-data:{labels:['Cycle 1','Cycle 2','Cycle 3','Cycle 4'],
-datasets:[{data:[2080,2200,2350,2500],
+data:{
+labels:['Cycle 1','Cycle 2','Cycle 3','Cycle 4'],
+datasets:[{
+label:'Capital Growth (Juta)',
+data:[2080,2200,2350,2500],
 borderColor:'#22c55e',
-backgroundColor:'rgba(34,197,94,.1)',
-fill:true,tension:.35}]},
-options:{animation:{duration:1800,easing:'easeOutQuart'}}
+backgroundColor:'rgba(34,197,94,0.1)',
+fill:true,
+tension:.3
+}]
+}
 });
 </script>
 
