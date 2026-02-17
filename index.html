@@ -12,90 +12,110 @@
 <style>
 body{
     margin:0;
-    background:linear-gradient(135deg,#0b1220 0%,#04080f 100%);
-    color:#e2e8f0;
+    background:#060b14;
+    color:#e5e7eb;
     font-family:'Inter',sans-serif;
 }
 
+/* CONTAINER */
 .container{
     max-width:1000px;
     margin:auto;
-    padding:90px 20px;
+    padding:80px 20px;
 }
 
 /* HEADER */
 .header{
-    margin-bottom:90px;
+    margin-bottom:60px;
 }
 
 .logo-img{
     height:50px;
-    margin-bottom:25px;
+    margin-bottom:30px;
 }
 
 .title h1{
     font-family:'Playfair Display',serif;
-    font-size:44px;
+    font-size:42px;
     margin:0;
     line-height:1.2;
-    letter-spacing:-0.5px;
 }
 
 .title p{
     margin-top:15px;
-    font-size:14px;
+    font-size:13px;
     letter-spacing:3px;
     color:#c8a94a;
 }
 
 /* SECTION */
 .section{
-    padding:70px 0;
+    padding:55px 0;
     border-bottom:1px solid rgba(255,255,255,0.05);
+    opacity:0;
+    transform:translateY(30px);
+    transition:all .7s ease;
+}
+
+.section.visible{
+    opacity:1;
+    transform:translateY(0);
 }
 
 .section h2{
     font-family:'Playfair Display',serif;
-    font-size:30px;
-    margin-bottom:30px;
+    font-size:28px;
     color:#c8a94a;
+    margin-bottom:25px;
 }
 
 .section p{
-    font-size:17px;
+    font-size:16px;
     line-height:1.7;
-    margin-bottom:14px;
+    margin-bottom:12px;
 }
 
-/* HIGHLIGHT */
+/* BIG HIGHLIGHT */
 .highlight{
     font-family:'Playfair Display',serif;
     font-size:48px;
-    margin:25px 0;
     color:#c8a94a;
+    margin:25px 0;
 }
 
-/* INSIGHT BOX */
+/* PREMIUM VALUE BLOCK */
+.premium-label{
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#9ca3af;
+    margin-top:20px;
+}
+
+.premium-value{
+    font-family:'Playfair Display',serif;
+    font-size:26px;
+    color:#c8a94a;
+    margin:5px 0 20px 0;
+}
+
+/* INSIGHT */
 .insight{
-    margin-top:35px;
-    padding:22px 26px;
-    background:rgba(255,255,255,0.04);
+    margin-top:30px;
+    padding:20px;
+    background:#0f1626;
     border-left:3px solid #c8a94a;
     border-radius:6px;
+    font-size:14px;
 }
 
-.insight ul{
-    padding-left:20px;
-}
-
-.insight li{
-    margin-bottom:6px;
-    font-size:15px;
-}
-
-/* CHART */
 canvas{
-    margin-top:40px;
+    margin-top:30px;
+}
+
+.legal{
+    font-size:14px;
+    color:#9ca3af;
 }
 
 @media(max-width:768px){
@@ -106,6 +126,7 @@ canvas{
 </head>
 
 <body>
+
 <div class="container">
 
 <div class="header">
@@ -119,9 +140,13 @@ canvas{
 <div class="section">
 <h2>I. Executive Summary</h2>
 <p>Proyek penggelaran Fiber To The Home (FTTH) berbasis SPK Pemerintah.</p>
-<p>Target pelaksanaan: Minimum 12 SPK – Maksimum 14 SPK selama tahun 2026 (rolling tahunan).</p>
-<p>Skema investasi: Silent Partner – Profit Sharing 50:50</p>
-<p>Management Fee: 12%</p>
+<p>Target pelaksanaan: 12–14 SPK selama 2026 (rolling tahunan).</p>
+
+<div class="premium-label">Investment Structure</div>
+<div class="premium-value">Silent Partner — 50:50 Profit Allocation</div>
+
+<div class="premium-label">Management Fee</div>
+<div class="premium-value">12% Fixed Allocation</div>
 </div>
 
 <div class="section">
@@ -129,28 +154,27 @@ canvas{
 <p>Nilai SPK contoh: Rp 589.831.800</p>
 <p>Cash In (SP2D setelah PPN 11%): Rp 520.752.400</p>
 <p>Direct Cost: Rp 348.000.000</p>
+
 <p class="highlight">Net Profit ± Rp 113.000.000</p>
-<p>Investor Share (50%) ± Rp 56–60 Juta / SPK</p>
+
+<div class="premium-label">Investor Net Share</div>
+<div class="premium-value">± Rp 56–60 Juta per SPK</div>
 </div>
 
 <div class="section">
 <h2>III. Model Efisiensi Modal</h2>
-<p>Total estimasi cost 12 SPK ± Rp 4,176 Miliar</p>
+<p>Total estimasi 12 SPK: Rp 4,176 Miliar</p>
+
 <p class="highlight">50% dari total cost (± Rp 2,08 Miliar)</p>
-<p>Lead Time: 60 hari pekerjaan + 30 hari proses SP2D = 90 hari cycle</p>
+
+<p>Lead Time: 60 hari pekerjaan + 30 hari proses SP2D = 90 hari cycle.</p>
 </div>
 
 <div class="section">
 <h2>IV. Margin Visualization per SPK</h2>
 <canvas id="chart1"></canvas>
 <div class="insight">
-<strong>Key Insight:</strong>
-<ul>
-<li>Gross margin ± Rp 113 Juta per SPK</li>
-<li>Struktur biaya efisien dengan profit share 50:50</li>
-<li>Margin stabil karena berbasis kontrak SPK Pemerintah</li>
-</ul>
-<p>Setiap proyek menghasilkan margin yang terukur dan berbasis pembayaran terkonfirmasi.</p>
+Gross margin stabil berbasis kontrak SPK Pemerintah.
 </div>
 </div>
 
@@ -158,13 +182,7 @@ canvas{
 <h2>V. Cumulative Profit Projection (12 SPK)</h2>
 <canvas id="chart2"></canvas>
 <div class="insight">
-<strong>Key Insight:</strong>
-<ul>
-<li>Potensi akumulasi ± Rp 696 Juta per 12 SPK</li>
-<li>Profit bertumbuh linear seiring penyelesaian proyek</li>
-<li>Model rolling memungkinkan konsistensi cash-in</li>
-</ul>
-<p>Return meningkat progresif tanpa menambah kebutuhan modal penuh.</p>
+Potensi akumulasi ± Rp 696 Juta per 12 SPK dengan sistem rolling.
 </div>
 </div>
 
@@ -172,68 +190,78 @@ canvas{
 <h2>VI. Capital Rotation Model (90 Day Cycle)</h2>
 <canvas id="chart3"></canvas>
 <div class="insight">
-<strong>Key Insight:</strong>
-<ul>
-<li>Modal efektif ± Rp 2,08 Miliar</li>
-<li>90 hari cycle per rotasi</li>
-<li>Potensi 4x rotasi per tahun</li>
-</ul>
-<p>Efisiensi rotasi modal menjadi penggerak utama peningkatan return.</p>
+Potensi 4x rotasi modal per tahun dengan efisiensi tinggi.
 </div>
 </div>
 
 <div class="section">
 <h2>VII. Capital Safeguard & Governance</h2>
-<p>Pengelolaan proyek dilakukan melalui sistem monitoring progres mingguan dan kontrol cashflow terstruktur.</p>
-<p>Distribusi profit dilakukan setelah penerimaan SP2D terkonfirmasi.</p>
+<p>Monitoring progres mingguan dan kontrol cashflow terstruktur.</p>
+<p>Distribusi dilakukan setelah penerimaan SP2D terkonfirmasi.</p>
 </div>
 
 <div class="section">
 <h2>VIII. Exit Strategy</h2>
-<p>Investor dapat melakukan exit setelah satu cycle 90 hari selesai.</p>
-<p>Skema exit disesuaikan berdasarkan kesepakatan bersama dan status rotasi modal berjalan.</p>
+<p>Exit setelah 1 cycle 90 hari atau sesuai kesepakatan.</p>
 </div>
 
-<div class="section">
+<div class="section legal">
 <h2>IX. Terms & Conditions</h2>
 <p>Investasi dilakukan berdasarkan perjanjian tertulis antara para pihak.</p>
-<p>Distribusi profit mengikuti skema profit sharing 50:50 setelah dikurangi biaya operasional.</p>
-<p>Setiap keputusan strategis dilakukan berdasarkan kesepakatan bersama.</p>
+<p>Distribusi mengikuti skema 50:50 setelah biaya operasional.</p>
 </div>
 
-<div class="section">
+<div class="section legal">
 <h2>X. Disclaimer</h2>
 <p>Dokumen ini bersifat informasi internal dan bukan penawaran publik.</p>
-<p>Proyeksi yang ditampilkan merupakan estimasi berdasarkan asumsi operasional yang berlaku.</p>
 <p>Setiap keputusan investasi merupakan tanggung jawab masing-masing pihak.</p>
 </div>
 
 </div>
 
 <script>
-Chart.defaults.color="#cbd5e1";
+/* SCROLL ANIMATION */
+const sections=document.querySelectorAll('.section');
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+},{threshold:0.15});
+
+sections.forEach(section=>{
+  observer.observe(section);
+});
+
+/* CHART STYLE */
+Chart.defaults.color="#9ca3af";
 Chart.defaults.font.family="Inter";
 
+/* CHART 1 */
 new Chart(document.getElementById('chart1'),{
 type:'bar',
 data:{
 labels:['Cash In','Direct Cost','Net Profit'],
 datasets:[{
-label:'Margin Structure (Juta)',
 data:[520,348,113],
 backgroundColor:['#c8a94a','#4b5563','#22c55e'],
 borderRadius:6
 }]
 },
-options:{plugins:{legend:{display:false}}}
+options:{
+plugins:{legend:{display:false}},
+scales:{y:{grid:{color:'rgba(255,255,255,0.05)'}}}
+}
 });
 
+/* CHART 2 */
 new Chart(document.getElementById('chart2'),{
 type:'line',
 data:{
 labels:[1,2,3,4,5,6,7,8,9,10,11,12],
 datasets:[{
-label:'Cumulative Profit (Juta)',
 data:[58,116,174,232,290,348,406,464,522,580,638,696],
 borderColor:'#c8a94a',
 backgroundColor:'rgba(200,169,74,0.1)',
@@ -243,12 +271,12 @@ tension:.3
 }
 });
 
+/* CHART 3 */
 new Chart(document.getElementById('chart3'),{
 type:'line',
 data:{
 labels:['Cycle 1','Cycle 2','Cycle 3','Cycle 4'],
 datasets:[{
-label:'Capital Growth (Juta)',
 data:[2080,2200,2350,2500],
 borderColor:'#22c55e',
 backgroundColor:'rgba(34,197,94,0.1)',
