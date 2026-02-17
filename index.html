@@ -4,227 +4,235 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Confidential Investment Memorandum – FTTH 2026</title>
+<title>Confidential Investment Memorandum</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
-body {
+body{
     margin:0;
-    font-family:'Inter', sans-serif;
-    background:#05070d;
-    color:#e6e6e6;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#000814,#001d3d);
+    color:#eaeaea;
 }
-
 .container{
-    width:90%;
+    width:92%;
     max-width:1100px;
     margin:auto;
+    padding:40px 0;
 }
-
 header{
-    padding:40px 0 20px 0;
-    border-bottom:1px solid rgba(255,215,0,0.2);
+    text-align:center;
+    margin-bottom:40px;
 }
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:20px;
+header img{
+    width:180px;
+    margin-bottom:15px;
 }
-
-.logo img{
-    height:60px;
-}
-
 h1{
-    font-size:28px;
-    font-weight:600;
-    margin:0;
+    font-size:26px;
+    color:#d4af37;
+    margin:5px 0;
 }
-
+.subtitle{
+    font-size:14px;
+    opacity:0.8;
+}
+section{
+    margin-top:45px;
+}
 h2{
     color:#d4af37;
-    font-weight:600;
-    margin:35px 0 15px 0;
     font-size:20px;
+    margin-bottom:10px;
 }
-
-.section{
-    margin-bottom:30px;
-}
-
 .card{
-    background:#0b1220;
-    padding:20px;
-    border-radius:8px;
-    border:1px solid rgba(212,175,55,0.15);
+    background:rgba(255,255,255,0.05);
+    padding:18px;
+    border-radius:10px;
+    line-height:1.6;
 }
-
-ul{
-    padding-left:18px;
-    margin:10px 0;
+.chart-box{
+    height:360px;
+    margin-top:20px;
 }
-
-p{
-    margin:8px 0;
-    line-height:1.5;
+@media(max-width:768px){
+    .chart-box{height:280px;}
 }
-
-.highlight{
-    color:#d4af37;
-    font-weight:600;
-}
-
 footer{
-    margin-top:50px;
-    padding:30px 0;
+    margin-top:60px;
     text-align:center;
-    font-size:13px;
-    color:#888;
-    border-top:1px solid rgba(255,215,0,0.15);
+    font-size:12px;
+    opacity:0.6;
 }
 </style>
 </head>
-
 <body>
 
 <div class="container">
 
-<header>
-    <div class="logo">
-        <img src="logo.png.jpeg">
-        <div>
-            <h1>Confidential Investment Memorandum</h1>
-            <div>FTTH Infrastructure Expansion 2026</div>
-        </div>
-    </div>
+<header data-aos="fade-down">
+<img src="logo.png.jpeg" alt="Arthasys Logo">
+<h1>Confidential Investment Memorandum</h1>
+<div class="subtitle">
+FTTH Infrastructure Expansion 2026<br>
+PT Arthasys Solusi Teknologi
+</div>
 </header>
 
-<div class="section">
+<section data-aos="fade-up">
 <h2>I. Executive Summary</h2>
 <div class="card">
-<p>Proyek penggelaran Fiber To The Home (FTTH) berbasis SPK Pemerintah.</p>
-<p>Target pelaksanaan: <span class="highlight">Minimum 12 SPK – Maksimum 14 SPK</span> selama tahun 2026 (rolling tahunan).</p>
-<p>Skema investasi: <span class="highlight">Silent Partner – Profit Sharing 50:50</span></p>
-<p>Management Fee: <span class="highlight">12%</span></p>
-</div>
-</div>
+Project penggelaran Fiber To The Home (FTTH) berbasis SPK Pemerintah.  
+Target estimasi <b>minimum 12 SPK</b> – <b>maksimum 14 SPK</b> selama tahun 2026.  
 
-<div class="section">
+Skema investasi Silent Partner.  
+Profit Sharing: <b>50:50</b>  
+Management Fee: <b>12%</b>  
+
+Nilai SPK dapat berubah mengikuti hasil survey lapangan petugas pemerintah.  
+SPK lama hanya contoh referensi. Acuan utama adalah nilai satuan pekerjaan sebagaimana tercantum dalam SPK dan detail cost satuan.
+</div>
+</section>
+
+<section data-aos="fade-up">
 <h2>II. Unit Economics per SPK</h2>
 <div class="card">
-<p>Nilai SPK contoh: Rp 589.831.800</p>
-<p>Cash In (SP2D setelah PPN 11%): Rp 520.752.400</p>
-<p>Direct Cost: Rp 348.000.000</p>
-<p><strong>Net Profit ± Rp 113.000.000</strong></p>
-<p>Investor Share (50%) ± Rp 56–60 Juta / SPK</p>
-<p><em>Catatan: Nilai SPK dapat berubah mengikuti hasil survey lapangan petugas pemerintah. SPK lama hanya contoh referensi. Acuan utama adalah harga satuan pekerjaan.</em></p>
-</div>
-</div>
+Nilai SPK contoh: Rp 589.831.800  
+Cash In (SP2D setelah PPN 11%): Rp 520.752.400  
+Direct Cost: Rp 348.000.000  
 
-<div class="section">
+Net Profit estimasi: ± Rp 113.000.000  
+Investor Share (50%): ± Rp 56–60 Juta / SPK
+</div>
+</section>
+
+<section data-aos="fade-up">
 <h2>III. Capital Efficiency Model</h2>
 <div class="card">
-<p>Total estimasi cost 12 SPK ± Rp 4,176 Miliar</p>
-<p>Modal efektif dibutuhkan: <span class="highlight">50% dari total cost (± Rp 2,08 Miliar)</span></p>
-<p>Lead Time: 60 hari pekerjaan + 30 hari proses SP2D = 90 hari cycle</p>
-<p>Dengan sistem rolling, modal berputar hingga menyelesaikan seluruh SPK.</p>
-</div>
+Total estimasi cost 12 SPK: Rp 4,176 Miliar  
+
+Modal efektif dibutuhkan:  
+<b>50% dari total cost (± Rp 2,08 Miliar)</b>  
+
+Lead Time:
+• 60 Hari pekerjaan  
+• 30 Hari proses SP2D  
+Total 90 Hari capital cycle  
+
+Dengan sistem rolling tahunan, modal dapat berputar hingga menyelesaikan seluruh SPK dalam periode 2026.
 </div>
 
-<div class="section">
+<div class="chart-box">
+<canvas id="capitalChart"></canvas>
+</div>
+</section>
+
+<section data-aos="fade-up">
 <h2>IV. Rolling Cashflow Projection</h2>
-<canvas id="cashflowChart"></canvas>
+<div class="chart-box">
+<canvas id="profitChart"></canvas>
 </div>
+</section>
 
-<div class="section">
-<h2>V. Downside Protection & Sensitivity</h2>
+<section data-aos="fade-up">
+<h2>V. Downside Protection & Sensitivity Analysis</h2>
 <div class="card">
-<ul>
-<li>Base Case ROI ± 22% annual</li>
-<li>Cost +5% → ROI ± 18%</li>
-<li>Cost +10% → ROI ± 14–15%</li>
-<li>Proyek tetap profitable dalam skenario konservatif</li>
-</ul>
-</div>
-</div>
+Base Case ROI: ± 22% (Annual)  
+Cost +5%: ROI ± 18%  
+Cost +10%: ROI ± 14–15%  
 
-<div class="section">
+Proyek tetap profitable dalam skenario konservatif.
+</div>
+</section>
+
+<section data-aos="fade-up">
 <h2>VI. Distribution Waterfall</h2>
 <div class="card">
-<ul>
-<li>Pengembalian modal SPK terlebih dahulu</li>
-<li>Management fee 12%</li>
-<li>Sisa profit dibagi 50:50</li>
-</ul>
+1. Pengembalian modal SPK terlebih dahulu  
+2. Management Fee 12%  
+3. Sisa profit dibagi 50:50
 </div>
-</div>
+</section>
 
-<div class="section">
+<section data-aos="fade-up">
 <h2>VII. Capital Safeguard & Governance</h2>
 <div class="card">
-<ul>
-<li>Perhitungan berbasis SPK (contract-based accounting)</li>
-<li>Laporan progres & distribusi per SPK</li>
-<li>Tidak ada pengalihan saham</li>
-<li>Investor tidak terlibat operasional</li>
-<li>Opsi exit Desember 2026</li>
-</ul>
+Perhitungan berbasis SPK (contract-based accounting)  
+Laporan progres & distribusi per SPK  
+Tidak ada pengalihan saham  
+Investor tidak terlibat operasional  
+Opsi exit akhir periode 2026
 </div>
-</div>
+</section>
 
-<div class="section">
+<section data-aos="fade-up">
 <h2>VIII. Exit Strategy</h2>
 <div class="card">
-<ul>
-<li>Full capital return akhir 2026</li>
-<li>Opsi perpanjangan 2027</li>
-<li>Opsi partial withdrawal setelah milestone</li>
-</ul>
+Full capital return – Desember 2026  
+Opsi perpanjangan untuk 2027  
+Opsi penarikan sebagian setelah milestone tertentu
 </div>
-</div>
+</section>
 
-<div class="section">
+<section data-aos="fade-up">
 <h2>IX. Disclaimer & Terms</h2>
 <div class="card">
-<p>Dokumen ini bersifat confidential dan hanya untuk calon investor terkait.</p>
-<p>Proyeksi berdasarkan estimasi konservatif dan SPK referensi.</p>
-<p>Nilai SPK aktual dapat berubah mengikuti hasil survey dan kondisi lapangan.</p>
-<p>Distribusi mengikuti realisasi pembayaran SP2D pemerintah.</p>
+Dokumen ini bersifat confidential dan hanya untuk calon investor terkait.  
+Proyeksi berdasarkan estimasi konservatif dan SPK referensi.  
+Nilai SPK dapat berubah mengikuti kondisi lapangan dan hasil survey pemerintah.  
+Distribusi mengikuti realisasi pembayaran SP2D pemerintah.
 </div>
-</div>
+</section>
 
 <footer>
-© 2026 PT Arthasys Solusi Teknologi – Confidential
+© 2026 PT Arthasys Solusi Teknologi — Confidential
 </footer>
 
 </div>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-const ctx = document.getElementById('cashflowChart');
-new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['1','2','3','4','5','6','7','8','9','10','11','12'],
-        datasets: [{
-            label: 'Cumulative Profit (Juta)',
-            data: [60,120,180,240,300,360,420,480,540,600,660,720],
-            borderColor:'#d4af37',
-            backgroundColor:'rgba(212,175,55,0.1)',
-            tension:0.3,
-            fill:true
-        }]
-    },
-    options:{
-        plugins:{legend:{labels:{color:'#fff'}}},
-        scales:{
-            x:{ticks:{color:'#aaa'}},
-            y:{ticks:{color:'#aaa'}}
-        }
-    }
+AOS.init({duration:800, once:true});
+
+new Chart(document.getElementById("capitalChart"),{
+type:"line",
+data:{
+labels:["1","2","3","4","5","6","7","8","9","10","11","12"],
+datasets:[
+{
+label:"Tanpa Efisiensi",
+data:[350,700,1050,1400,1750,2100,2450,2800,3150,3500,3850,4200],
+borderColor:"#999",
+tension:0.4
+},
+{
+label:"Model 50%",
+data:[175,350,525,700,875,1050,1225,1400,1575,1750,1925,2100],
+borderColor:"#d4af37",
+backgroundColor:"rgba(212,175,55,0.2)",
+fill:true,
+tension:0.4
+}
+]
+},
+options:{responsive:true,maintainAspectRatio:false}
+});
+
+new Chart(document.getElementById("profitChart"),{
+type:"bar",
+data:{
+labels:["1","2","3","4","5","6","7","8","9","10","11","12"],
+datasets:[
+{
+label:"Cumulative Investor Profit (Juta)",
+data:[56,112,168,224,280,336,392,448,504,560,616,672],
+backgroundColor:"#d4af37"
+}
+]
+},
+options:{responsive:true,maintainAspectRatio:false}
 });
 </script>
 
