@@ -4,56 +4,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Memorandum Investasi 2026 | Arthasys</title>
+<title>Memorandum Investasi Privat 2026 | Arthasys</title>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
 body{
 margin:0;
-font-family: 'Segoe UI',sans-serif;
-background:#05070d;
-color:#eaeaea;
-overflow-x:hidden;
+font-family:'Segoe UI',sans-serif;
+background:#0c0c0e;
+color:#e8e8e8;
+line-height:1.8;
 }
 
 section{
-padding:90px 8%;
-border-bottom:1px solid #111;
+padding:90px 10%;
+border-bottom:1px solid #181818;
 }
 
-h1,h2,h3{
+h1,h2{
 color:#c6a756;
-letter-spacing:1px;
+font-weight:500;
 }
 
 .hero{
 text-align:center;
-padding:140px 8%;
-background:linear-gradient(180deg,#0b0f1c,#05070d);
-}
-
-.hero h1{
-font-size:42px;
-margin-bottom:20px;
+padding:140px 10%;
 }
 
 .logo{
-width:200px;
+width:190px;
 margin-bottom:30px;
+}
+
+.gold-line{
+height:1px;
+background:#c6a756;
+margin:60px 0;
 }
 
 .card{
-background:rgba(255,255,255,0.03);
+background:#151515;
 padding:35px;
-border-radius:12px;
+border-radius:10px;
 border:1px solid rgba(198,167,86,0.2);
-margin-bottom:30px;
+margin-top:25px;
 }
 
 .highlight{
-font-size:28px;
+font-size:26px;
 color:#c6a756;
 font-weight:600;
 }
@@ -61,15 +60,15 @@ font-weight:600;
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+gap:30px;
 margin-top:40px;
 }
 
-.box{
-background:rgba(255,255,255,0.02);
+.timeline-box{
+background:#151515;
 padding:30px;
 border-radius:10px;
-border:1px solid #111;
+border:1px solid rgba(198,167,86,0.2);
 text-align:center;
 }
 
@@ -79,8 +78,8 @@ margin-top:50px;
 
 footer{
 text-align:center;
-padding:60px;
-font-size:14px;
+padding:70px;
+font-size:13px;
 color:#666;
 }
 </style>
@@ -90,17 +89,19 @@ color:#666;
 
 <section class="hero">
 <img src="logo.png.jpeg" class="logo">
-<h1>Confidential Investment Memorandum</h1>
-<p>FTTH Infrastructure Expansion 2026</p>
+<h1>Memorandum Investasi Infrastruktur Privat</h1>
+<p>FTTH Surabaya 2026</p>
+<p><strong>Prepared Exclusively For H. Ananta Agung Junaedy</strong></p>
+<p>Private & Confidential</p>
 </section>
 
 <section>
 <h2>I. Ringkasan Eksekutif</h2>
 <div class="card">
-<p>Estimasi 12–14 SPK dalam 2026.</p>
-<p>Total cost (12 SPK): Rp 4,176 Miliar</p>
-<p class="highlight">Modal efektif hanya 50% (± Rp 2,08 Miliar)</p>
-<p>Siklus rotasi modal 90 hari (60 hari kerja + 30 hari SP2D).</p>
+<p>Proyek penggelaran FTTH berbasis SPK Pemerintah Kota Surabaya dengan skema <strong>Silent Capital Participation (Non-Equity)</strong>.</p>
+<p>Target 12–14 SPK sepanjang tahun 2026.</p>
+<p>Capital Cycle: <strong>60 hari pekerjaan + 30 hari SP2D = 90 hari</strong>.</p>
+<p class="highlight">Target ROI Tahunan: 20% – 25%</p>
 </div>
 </section>
 
@@ -111,47 +112,63 @@ color:#666;
 <p>Cash In (SP2D): Rp 520.752.400</p>
 <p>Direct Cost: Rp 348.000.000</p>
 <p class="highlight">Net Profit ± Rp 113.000.000</p>
-<p>Investor Share (35%): ± Rp 39 – 42 Juta</p>
-<p>ROI per SPK: ± 18–22%</p>
+<p>Porsi Investor (35%): ± Rp 39 – 42 Juta</p>
 </div>
 </section>
 
 <section>
-<h2>III. Capital Rotation Model (90 Days)</h2>
+<h2>III. Capital Rotation Model (90 Hari)</h2>
 <div class="grid">
-<div class="box">
+<div class="timeline-box">
 <h3>60 Hari</h3>
-<p>Pekerjaan Lapangan</p>
+Pekerjaan Lapangan
 </div>
-<div class="box">
+<div class="timeline-box">
 <h3>30 Hari</h3>
-<p>Proses SP2D</p>
+Proses SP2D
 </div>
-<div class="box">
+<div class="timeline-box">
 <h3>Total 90 Hari</h3>
-<p>Capital Cycle</p>
+Siklus Rotasi Modal
 </div>
 </div>
 </section>
 
 <section>
-<h2>IV. Capital Efficiency Visualization</h2>
+<h2>IV. Capital Efficiency (50% Modal Efektif)</h2>
+<div class="card">
+<p>Total cost 12 SPK: Rp 4,176 Miliar.</p>
+<p class="highlight">Modal efektif hanya ± Rp 2,08 Miliar (50%)</p>
+<p>Melalui rotasi SP2D, modal dapat diputar berkelanjutan hingga seluruh SPK selesai.</p>
+</div>
+
 <canvas id="capitalChart"></canvas>
 </section>
 
 <section>
 <h2>V. Rolling Cashflow Projection (12 SPK)</h2>
+<div class="card">
+<p>Proyeksi kumulatif profit hingga 12 SPK: ± Rp 1,356 Miliar.</p>
+</div>
+
 <canvas id="cashflowChart"></canvas>
 </section>
 
 <section>
-<h2>VI. ROI Sensitivity Analysis</h2>
-<canvas id="roiChart"></canvas>
+<h2>VI. Sensitivity Analysis</h2>
+<div class="card">
+<p>Base Case ROI: ±22%</p>
+<p>Cost +5% → ROI ±18%</p>
+<p>Cost +10% → ROI ±14–15%</p>
+<p>Proyek tetap profitable dalam skenario konservatif.</p>
+</div>
 </section>
 
 <section>
 <h2>VII. Distribution Waterfall</h2>
-<canvas id="waterfallChart"></canvas>
+<div class="card">
+Revenue → Direct Cost → Pajak (SP2D) → Management Fee 10% → Net Profit → 35% Investor
+</div>
 </section>
 
 <section>
@@ -167,12 +184,20 @@ color:#666;
 </div>
 </section>
 
+<section>
+<h2>IX. Exit Strategy</h2>
+<div class="card">
+<p>Full capital return – Desember 2026.</p>
+<p>Opsi perpanjangan untuk 2027.</p>
+<p>Opsi penarikan sebagian sesuai milestone.</p>
+</div>
+</section>
+
 <footer>
-© 2026 PT Arthasys Solusi Teknologi
+© 2026 PT Arthasys Solusi Teknologi – Confidential Document
 </footer>
 
 <script>
-
 new Chart(document.getElementById('capitalChart'),{
 type:'line',
 data:{
@@ -181,8 +206,7 @@ datasets:[
 {
 label:'Modal 100%',
 data:[348,696,1044,1392,1740,2088,2436,2784,3132,3480,3828,4176],
-borderColor:'#444',
-backgroundColor:'rgba(100,100,100,0.2)',
+borderColor:'#555',
 tension:0.4
 },
 {
@@ -190,8 +214,8 @@ label:'Modal Efektif 50%',
 data:[174,348,522,696,870,1044,1218,1392,1566,1740,1914,2088],
 borderColor:'#c6a756',
 backgroundColor:'rgba(198,167,86,0.2)',
-tension:0.4,
-fill:true
+fill:true,
+tension:0.4
 }
 ]
 },
@@ -207,34 +231,8 @@ label:'Cumulative Profit (Juta)',
 data:[39,78,117,156,195,234,273,312,351,390,429,468],
 backgroundColor:'#c6a756'
 }]
-},
-options:{responsive:true}
-});
-
-new Chart(document.getElementById('roiChart'),{
-type:'bar',
-data:{
-labels:['Base','Cost +5%','Cost +10%'],
-datasets:[{
-label:'Annual ROI %',
-data:[22,18,15],
-backgroundColor:['#c6a756','#888','#555']
-}]
 }
 });
-
-new Chart(document.getElementById('waterfallChart'),{
-type:'bar',
-data:{
-labels:['SPK Value','Direct Cost','Net Profit','Investor 35%','Management 65%'],
-datasets:[{
-data:[589,348,113,42,71],
-backgroundColor:['#999','#555','#c6a756','#00c853','#2962ff']
-}]
-},
-options:{responsive:true}
-});
-
 </script>
 
 </body>
