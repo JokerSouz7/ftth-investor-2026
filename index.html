@@ -3,237 +3,265 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Confidential Investment Memorandum</title>
-
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
-body{
-    margin:0;
-    font-family:'Segoe UI',sans-serif;
-    background:linear-gradient(135deg,#000814,#001d3d);
-    color:#eaeaea;
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #0b0f1a;
+    color: #e6e6e6;
+    scroll-behavior: smooth;
 }
-.container{
-    width:92%;
-    max-width:1100px;
-    margin:auto;
-    padding:40px 0;
+
+.container {
+    width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
 }
-header{
-    text-align:center;
-    margin-bottom:40px;
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 2px solid #c8a94a;
+    padding-bottom: 20px;
 }
-header img{
-    width:180px;
-    margin-bottom:15px;
+
+.header img {
+    height: 65px;
+    object-fit: contain;
 }
-h1{
-    font-size:26px;
-    color:#d4af37;
-    margin:5px 0;
+
+.title h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
 }
-.subtitle{
-    font-size:14px;
-    opacity:0.8;
+
+.title p {
+    margin: 5px 0 0;
+    color: #c8a94a;
 }
-section{
-    margin-top:45px;
+
+/* SECTION ANIMATION */
+.section {
+    margin-top: 40px;
+    padding: 25px;
+    background: #111827;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
 }
-h2{
-    color:#d4af37;
-    font-size:20px;
-    margin-bottom:10px;
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
-.card{
-    background:rgba(255,255,255,0.05);
-    padding:18px;
-    border-radius:10px;
-    line-height:1.6;
+
+.section h2 {
+    color: #c8a94a;
+    margin-top: 0;
 }
-.chart-box{
-    height:360px;
-    margin-top:20px;
+
+.chart-container {
+    margin-top: 30px;
 }
-@media(max-width:768px){
-    .chart-box{height:280px;}
-}
-footer{
-    margin-top:60px;
-    text-align:center;
-    font-size:12px;
-    opacity:0.6;
+
+canvas {
+    background: #0f172a;
+    padding: 20px;
+    border-radius: 8px;
 }
 </style>
 </head>
+
 <body>
 
 <div class="container">
 
-<header data-aos="fade-down">
-<img src="logo.png.jpeg" alt="Arthasys Logo">
-<h1>Confidential Investment Memorandum</h1>
-<div class="subtitle">
-FTTH Infrastructure Expansion 2026<br>
-PT Arthasys Solusi Teknologi
+<!-- HEADER -->
+<div class="header">
+    <img src="logo.png" alt="Arthasys Logo">
+    <div class="title">
+        <h1>Confidential Investment Memorandum</h1>
+        <p>FTTH Infrastructure Expansion 2026</p>
+    </div>
 </div>
-</header>
 
-<section data-aos="fade-up">
+<!-- I -->
+<div class="section">
 <h2>I. Executive Summary</h2>
-<div class="card">
-Project penggelaran Fiber To The Home (FTTH) berbasis SPK Pemerintah.  
-Target estimasi <b>minimum 12 SPK</b> – <b>maksimum 14 SPK</b> selama tahun 2026.  
-
-Skema investasi Silent Partner.  
-Profit Sharing: <b>50:50</b>  
-Management Fee: <b>12%</b>  
-
-Nilai SPK dapat berubah mengikuti hasil survey lapangan petugas pemerintah.  
-SPK lama hanya contoh referensi. Acuan utama adalah nilai satuan pekerjaan sebagaimana tercantum dalam SPK dan detail cost satuan.
+<p>Proyek penggelaran Fiber To The Home (FTTH) berbasis SPK Pemerintah.</p>
+<p>Target pelaksanaan: Minimum 12 SPK – Maksimum 14 SPK selama tahun 2026 (rolling tahunan).</p>
+<p>Skema investasi: Silent Partner – Profit Sharing 50:50</p>
+<p>Management Fee: 12%</p>
 </div>
-</section>
 
-<section data-aos="fade-up">
+<!-- II -->
+<div class="section">
 <h2>II. Unit Economics per SPK</h2>
-<div class="card">
-Nilai SPK contoh: Rp 589.831.800  
-Cash In (SP2D setelah PPN 11%): Rp 520.752.400  
-Direct Cost: Rp 348.000.000  
-
-Net Profit estimasi: ± Rp 113.000.000  
-Investor Share (50%): ± Rp 56–60 Juta / SPK
+<p>Nilai SPK contoh: Rp 589.831.800</p>
+<p>Cash In (SP2D setelah PPN 11%): Rp 520.752.400</p>
+<p>Direct Cost: Rp 348.000.000</p>
+<p><strong>Net Profit ± Rp 113.000.000</strong></p>
+<p>Investor Share (50%) ± Rp 56–60 Juta / SPK</p>
 </div>
-</section>
 
-<section data-aos="fade-up">
+<!-- III -->
+<div class="section">
 <h2>III. Capital Efficiency Model</h2>
-<div class="card">
-Total estimasi cost 12 SPK: Rp 4,176 Miliar  
-
-Modal efektif dibutuhkan:  
-<b>50% dari total cost (± Rp 2,08 Miliar)</b>  
-
-Lead Time:
-• 60 Hari pekerjaan  
-• 30 Hari proses SP2D  
-Total 90 Hari capital cycle  
-
-Dengan sistem rolling tahunan, modal dapat berputar hingga menyelesaikan seluruh SPK dalam periode 2026.
+<p>Total estimasi cost 12 SPK ± Rp 4,176 Miliar</p>
+<p>Modal efektif dibutuhkan: 50% dari total cost (± Rp 2,08 Miliar)</p>
+<p>Lead Time: 60 hari pekerjaan + 30 hari proses SP2D = 90 hari cycle</p>
+<p>Dengan sistem rolling, modal berputar hingga menyelesaikan seluruh SPK.</p>
 </div>
 
-<div class="chart-box">
-<canvas id="capitalChart"></canvas>
+<!-- IV -->
+<div class="section">
+<h2>IV. Margin Visualization per SPK</h2>
+<div class="chart-container">
+<canvas id="chart1"></canvas>
 </div>
-</section>
-
-<section data-aos="fade-up">
-<h2>IV. Rolling Cashflow Projection</h2>
-<div class="chart-box">
-<canvas id="profitChart"></canvas>
 </div>
-</section>
 
-<section data-aos="fade-up">
-<h2>V. Downside Protection & Sensitivity Analysis</h2>
-<div class="card">
-Base Case ROI: ± 22% (Annual)  
-Cost +5%: ROI ± 18%  
-Cost +10%: ROI ± 14–15%  
-
-Proyek tetap profitable dalam skenario konservatif.
+<!-- V -->
+<div class="section">
+<h2>V. Cumulative Profit Projection (12 SPK)</h2>
+<div class="chart-container">
+<canvas id="chart2"></canvas>
 </div>
-</section>
-
-<section data-aos="fade-up">
-<h2>VI. Distribution Waterfall</h2>
-<div class="card">
-1. Pengembalian modal SPK terlebih dahulu  
-2. Management Fee 12%  
-3. Sisa profit dibagi 50:50
 </div>
-</section>
 
-<section data-aos="fade-up">
-<h2>VII. Capital Safeguard & Governance</h2>
-<div class="card">
-Perhitungan berbasis SPK (contract-based accounting)  
-Laporan progres & distribusi per SPK  
-Tidak ada pengalihan saham  
-Investor tidak terlibat operasional  
-Opsi exit akhir periode 2026
+<!-- VI -->
+<div class="section">
+<h2>VI. Capital Rotation Model (90 Day Cycle)</h2>
+<div class="chart-container">
+<canvas id="chart3"></canvas>
 </div>
-</section>
-
-<section data-aos="fade-up">
-<h2>VIII. Exit Strategy</h2>
-<div class="card">
-Full capital return – Desember 2026  
-Opsi perpanjangan untuk 2027  
-Opsi penarikan sebagian setelah milestone tertentu
 </div>
-</section>
 
-<section data-aos="fade-up">
-<h2>IX. Disclaimer & Terms</h2>
-<div class="card">
-Dokumen ini bersifat confidential dan hanya untuk calon investor terkait.  
-Proyeksi berdasarkan estimasi konservatif dan SPK referensi.  
-Nilai SPK dapat berubah mengikuti kondisi lapangan dan hasil survey pemerintah.  
-Distribusi mengikuti realisasi pembayaran SP2D pemerintah.
+<!-- VII -->
+<div class="section">
+<h2>VII. Risk Consideration</h2>
+<p>Nilai SPK dapat berubah mengikuti hasil survey lapangan petugas pemerintah.</p>
+<p>Lead time SP2D dapat bervariasi sesuai administrasi.</p>
 </div>
-</section>
 
-<footer>
-© 2026 PT Arthasys Solusi Teknologi — Confidential
-</footer>
+<!-- VIII -->
+<div class="section">
+<h2>VIII. Strategic Advantage</h2>
+<p>Model rolling capital menekan kebutuhan modal penuh.</p>
+<p>Skema SPK pemerintah memberikan kepastian pembayaran.</p>
+</div>
+
+<!-- IX -->
+<div class="section">
+<h2>IX. Closing Statement</h2>
+<p>Opportunity ini dirancang untuk menghasilkan return stabil dengan sistem capital rotation dan profit sharing transparan.</p>
+</div>
 
 </div>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-AOS.init({duration:800, once:true});
 
-new Chart(document.getElementById("capitalChart"),{
-type:"line",
-data:{
-labels:["1","2","3","4","5","6","7","8","9","10","11","12"],
-datasets:[
-{
-label:"Tanpa Efisiensi",
-data:[350,700,1050,1400,1750,2100,2450,2800,3150,3500,3850,4200],
-borderColor:"#999",
-tension:0.4
-},
-{
-label:"Model 50%",
-data:[175,350,525,700,875,1050,1225,1400,1575,1750,1925,2100],
-borderColor:"#d4af37",
-backgroundColor:"rgba(212,175,55,0.2)",
-fill:true,
-tension:0.4
-}
-]
-},
-options:{responsive:true,maintainAspectRatio:false}
+// ===== SCROLL FADE ANIMATION =====
+const sections = document.querySelectorAll('.section');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.15 });
+
+sections.forEach(section => {
+    observer.observe(section);
 });
 
-new Chart(document.getElementById("profitChart"),{
-type:"bar",
-data:{
-labels:["1","2","3","4","5","6","7","8","9","10","11","12"],
-datasets:[
-{
-label:"Cumulative Investor Profit (Juta)",
-data:[56,112,168,224,280,336,392,448,504,560,616,672],
-backgroundColor:"#d4af37"
+
+// ===== FUNCTION CREATE CHART WHEN VISIBLE =====
+function createChart(canvasId, config) {
+    const canvas = document.getElementById(canvasId);
+    let chartCreated = false;
+
+    const chartObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !chartCreated) {
+                new Chart(canvas, config);
+                chartCreated = true;
+            }
+        });
+    }, { threshold: 0.3 });
+
+    chartObserver.observe(canvas);
 }
-]
-},
-options:{responsive:true,maintainAspectRatio:false}
+
+
+// ===== CHART 1 =====
+createChart('chart1', {
+    type: 'bar',
+    data: {
+        labels: ['Cash In', 'Direct Cost', 'Net Profit'],
+        datasets: [{
+            data: [520, 348, 113],
+            backgroundColor: ['#c8a94a','#374151','#16a34a']
+        }]
+    },
+    options: {
+        animation: {
+            duration: 1500,
+            easing: 'easeOutQuart'
+        },
+        plugins: { legend: { display: false } }
+    }
 });
+
+
+// ===== CHART 2 =====
+createChart('chart2', {
+    type: 'line',
+    data: {
+        labels: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+        datasets: [{
+            label: 'Cumulative Profit (Juta)',
+            data: [58,116,174,232,290,348,406,464,522,580,638,696],
+            borderColor: '#c8a94a',
+            tension: 0.4
+        }]
+    },
+    options: {
+        animation: {
+            duration: 1800,
+            easing: 'easeOutQuart'
+        }
+    }
+});
+
+
+// ===== CHART 3 =====
+createChart('chart3', {
+    type: 'line',
+    data: {
+        labels: ['Cycle 1','Cycle 2','Cycle 3','Cycle 4'],
+        datasets: [{
+            label: 'Capital Growth',
+            data: [2080, 2200, 2350, 2500],
+            borderColor: '#16a34a',
+            tension: 0.4
+        }]
+    },
+    options: {
+        animation: {
+            duration: 1800,
+            easing: 'easeOutQuart'
+        }
+    }
+});
+
 </script>
 
 </body>
